@@ -56,6 +56,30 @@ namespace KeyLINQOperators
             {
                 Console.WriteLine(value2);
             }
+
+            Console.WriteLine("\n-------------------------------\n");
+
+            var codes = new List<string>
+            {
+                "AL", "AK", "AZ", "AR", "CA", "CO", "CT"
+            };
+
+            var states = new List<string>
+            {
+                "Alabama",
+                "Alaska",
+                "Arkansas",
+                "California",
+                "Colorado",
+                "Connecticut"
+            };
+
+            var codeWithStates = codes.Zip(states, (code, state) => $"{code} : {state}");
+
+            foreach (var item in codeWithStates)
+            {
+                Console.WriteLine($"{item}");
+            }
         }
     }
 }
