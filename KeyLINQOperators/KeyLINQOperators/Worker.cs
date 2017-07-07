@@ -31,7 +31,31 @@ namespace KeyLINQOperators
             Console.WriteLine($"listOfInt has 3 {has3}");
             Console.WriteLine($"listOfInt has 12 {has12}");
 
+            Console.WriteLine("\n-------------------------------\n");
 
+            var take5 = listOfInt.Take(5)
+                .Select(x => x * 10);
+            Console.WriteLine("Take in palce");
+            foreach (var value in take5)
+            {
+                Console.WriteLine(value);
+            }
+
+            Console.WriteLine("\n-------------------------------\n");
+
+            var multipleValueList = new List<int>
+            {
+                2, 7, 3, 7, 3, 2, 13, 5, 13, 18, 16
+            };
+
+            var outputDistinct = multipleValueList.Distinct()
+                .Select(x => x * 9);
+
+            Console.WriteLine("Distinct ...");
+            foreach (var value2 in outputDistinct)
+            {
+                Console.WriteLine(value2);
+            }
         }
     }
 }
