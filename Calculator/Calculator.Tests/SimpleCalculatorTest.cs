@@ -8,12 +8,14 @@ using NUnit.Framework;
 namespace Calculator.Tests
 {
     [TestFixture]
-    public class CalculatorTest
+    public class SimpleCalculatorTest
     {
+        SimpleCalc sut = new SimpleCalc();
+
         [Test]
         public void ShouldAddTwoNumbers()
         {
-            var sut = new SimpleCalc();
+            //var sut = new SimpleCalc();
 
             var result = sut.Add(1, 2);
 
