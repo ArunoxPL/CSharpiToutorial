@@ -11,7 +11,7 @@ namespace DOJO.Test
         private IVendingMachine _vendingMachine;
         private IChangeProvider _changeProvider;
 
-        [SetUp]
+        [SetUp] // ustawianie parametrów przed każdym testem
         public void SetUp()
         {
             _changeProvider = Substitute.For<IChangeProvider>();
